@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <input type="button" onclick="random()" value="click here to start">
+    <input id="i" style="display:none;" type="number" placeholder="please guess 1 number">
+    <input id ="m" style="display:none ;" onclick="txt()" type="button" value="check">
+    <p id="confirm"></p>
+    <script>
+        let x = document.getElementById("i");
+        let o = document.getElementById("m");
+        let r = Math.random() * 10;
+        let f = Math.round(r);
+        console.log(f)
+        function random() {
+                x.style.display = "block";
+                o.style.display = "block";
+        }       
+
+        function txt() {
+            let g = document.getElementById('i').value * 1;
+            if(f === g) {
+                document.getElementById('confirm').innerHTML = "Good Work";
+            } else {
+                document.getElementById('confirm').innerHTML = "Not matched"
+            }
+        }
+
+        
+        
+    </script>
+</body>
+</html>
